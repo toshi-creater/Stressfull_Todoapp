@@ -20,7 +20,7 @@ const TaskItem = ({ task, onClick }: TaskItemProps) => {
             className="flex items-center justify-between gap-x-6 px-5 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition"
             onClick={() => onClick(task.id)}
         >
-            <div className="flex items-center gap-x-4 h-[40px]">
+            <div className="flex items-center gap-x-4 h-[25px]">
                 <DoneCheck taskId={task.id} defaultIsDone={task.isDone} />
                 {/* <input
                     type="checkbox"
