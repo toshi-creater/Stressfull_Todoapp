@@ -28,9 +28,7 @@ const TaskItem = ({ task, onClick }: TaskItemProps) => {
                     className="mt-1 w-4 h-4 accent-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                 /> */}
                 <div className="flex flex-col">
-                    <p
-                        className="text-sm font-medium text-gray-900"
-                    >
+                    <p className={"text-sm font-medium " + (task.isDone ? "text-gray-500 line-through" : "text-gray-900")}>
                         {task.title}
                     </p>
                     {task.dueDate && <p className="text-xs text-gray-500 mt-1">{dateFormat(task.dueDate.toString())}</p>}
