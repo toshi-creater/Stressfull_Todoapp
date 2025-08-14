@@ -4,7 +4,7 @@ export const AppLayout = ({ children }) => {
     return (
         <>
             <Sidebar />
-            <div className="flex sm:ml-64 h-screen">
+            <div className="flex sm:ml-56 h-screen">
                 {children}
             </div>
         </>
