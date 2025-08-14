@@ -6,6 +6,7 @@ import type { TaskItemT } from "@/types";
 import { useState } from "react";
 import { AppLayout } from "./AppLayout";
 import { TodoDetailContext } from "@/provider/context/TodoDetailContext";
+import { TaskTitle } from "@/components/taskTitle";
 
 export const TodoLayout = ({ children }) => {
     const status = useAppSelector(getTodoStatus);
@@ -15,11 +16,7 @@ export const TodoLayout = ({ children }) => {
         <AppLayout>
             <TodoDetailContext.Provider value={{ setTodoDetail }}>
                 <div className="container mx-auto px-5 relative">
-                    <div className="pt-5">
-                        <h1 className="text-2xl font-semibold text-gray-800 my-4 tracking-tight">
-                            今日のタスク
-                        </h1>
-                    </div>
+                    <TaskTitle />
                     {status === "loading" ? <p>Loading</p> : children}
                     <TaskInputBar />
                 </div>
