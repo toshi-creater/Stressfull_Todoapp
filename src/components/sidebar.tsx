@@ -1,21 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import { SidebarList } from "./sidebarList";
-import { useDispatch } from "react-redux";
-import type { AppDispatch } from "../app/store";
-import { supabase } from "../lib/supabase";
-import { logout } from "../features/auth/authSlice";
-import { Button } from "./ui/button";
+import { LogoutButton } from "./logoutButton";
 
 const Sidebar = () => {
-    const navigate = useNavigate();
-    const dispatch = useDispatch<AppDispatch>();
-
-    const handleLogout = async () => {
-        await supabase.auth.signOut();
-        dispatch(logout());
-        navigate("/login");
-    };
-    
     return (
         <aside
             id="default-sidebar"
@@ -39,9 +25,7 @@ const Sidebar = () => {
                     </a>
                     <SidebarList />
                 </div>
-                <div className="flex justify-center p-3">
-                    <Button className="w-full text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200" onClick={handleLogout}>ログアウト</Button>
-                </div>
+                <LogoutButton />
             </div>
         </aside>
     );
