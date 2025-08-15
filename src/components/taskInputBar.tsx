@@ -29,7 +29,7 @@ const TaskInputBar = () => {
     }
 
     return (
-        <div className="absolute left-0 bottom-5 bg-white w-full">
+        <div className="fixed left-56 bottom-5 bg-white w-[calc(100%-theme(space.56))]">
             <form onSubmit={handleSubmit} className="px-5">
                 <div className="relative">
                     <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
