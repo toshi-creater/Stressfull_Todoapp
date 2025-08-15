@@ -37,3 +37,14 @@ export type SidebarNav = {
 export type SidebarConfig = {
     sidebarNav: SidebarNav[]
 }
+
+export type TaskPage = {
+    title: string,
+    href: string,
+    emptyIcon: string,
+    emptyText: string
+}
+
+export type TaskPageConfig = {
+    taskPage: TaskPage[]
+}

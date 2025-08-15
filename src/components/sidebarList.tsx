@@ -1,4 +1,4 @@
-import { sidebarConfig } from "../config/SidebarConfig";
+import { sidebarConfig } from "../config/AppConfig";
 import { SidebarItem } from "./sidebarItem";
 
 const SidebarList = () => {
