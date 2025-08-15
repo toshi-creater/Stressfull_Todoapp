@@ -15,7 +15,7 @@ export const TodoLayout = ({ children }) => {
     return (
         <AppLayout>
             <TodoDetailContext.Provider value={{ setTodoDetail }}>
-                <div className="container mx-auto px-5 relative">
+                <div className="container mx-auto px-5 flex flex-col relative">
                     <TaskTitle />
                     {status === "loading" ? <p>Loading</p> : children}
                     <TaskInputBar />
