@@ -12,6 +12,7 @@ import { AllPage } from "./pages/app/AllPage";
 import { ImportantPage } from "./pages/app/ImportantPage";
 import { DonePage } from "./pages/app/DonePage";
 import { TodayPage } from "./pages/app/TodayPage";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
     const dispatch = useAppDispatch()
@@ -39,6 +40,7 @@ function App() {
                   <Route path="all" element={<AllPage />} />
                   <Route path="done" element={<DonePage />} />
               </Route>
+              <Route path="*" element={<NotFound />} />
           </Routes>
       </BrowserRouter>
     );
